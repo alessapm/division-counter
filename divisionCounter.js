@@ -28,6 +28,7 @@ let counter = 0;
 const divisionCounter = (num1, num2) => {
 
   [num1,num2].forEach((num) => {
+
       if (num % 2 !== 0 || num === 0) {
         return 0;
       } else {
@@ -35,13 +36,16 @@ const divisionCounter = (num1, num2) => {
         divisionCounter(num/2);
       }
     });
+
     return counter;
 };
 
 
-//                     SOLUTION #2:
-// const divisionCounter = (num1, num2) => {
+//                     SOLUTION #2 (backup solution)
+// const divisionCounter = (a, b) => {
 //   let counter = 0;
+// let num1 = a % 1 === 0 ? a : 0;
+//  let num2 = b % 1 === 0 ? b : 0;
 //   let num = num1 * num2 === 0 ? num1 + num2 : num1 * num2;
 //   while (num % 2 === 0){
 //     counter++;
@@ -57,4 +61,5 @@ divisionCounter(2,8);
 // divisionCounter(0,8);
 // divisionCounter(13423, 6000);
 // divisionCounter(-10, -18);
+//divisionCounter(4.4, 10)
 
